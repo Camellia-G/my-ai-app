@@ -31,3 +31,10 @@ Run the application from the project root：
 ```bash
 python src/main.py
 ```
+
+Learning Progress:
+
+Day 1: 
+    (1) set up a Python project and commit the project files using git
+    (2) learn the usage of argparse: ArgumentParser()、add_argument()、parse_args()
+    (3) 
