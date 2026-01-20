@@ -1,8 +1,8 @@
 # My AI App
 
-一个Python项目。
+A Python project。
 
-## 项目结构
+## project struction
 
 ```
 my-ai-app/
@@ -14,10 +14,20 @@ my-ai-app/
 └── README.md
 ```
 
-## 安装与使用
+## Tech Stack
+Language: Python 3.10+
+Version Control: Git&GitHub
 
-1. 克隆项目后，复制 `.env` 文件并配置您的API密钥
-2. 运行主程序：
+
+## installation
+
+1. git clone https://github.com/your-username/my-ai-app.git
+cd my-ai-app
+2. create a `.env` file and add your API key
+    API_KEY=you_api_key
+
+## Usage
+Run the application from the project root：
 ```bash
 python src/main.py
 ```
