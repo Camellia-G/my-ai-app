@@ -15,7 +15,7 @@ my-ai-app/
 ```
 
 ## Tech Stack
-Language: Python 3.10+
+Language: Python 3.10+  
 Version Control: Git&GitHub
 
 
@@ -34,7 +34,7 @@ python src/main.py
 
 Learning Progress:
 
-Day 1: 
-    (1) set up a Python project and commit the project files using git
-    (2) learn the usage of argparse: ArgumentParser()、add_argument()、parse_args()
-    (3) 
+Day 1:   
+    (1) set up a Python project and commit the project files using git  
+    (2) learn how to use argparse, including ArgumentParser()、add_argument()、parse_args()  
+    (3) Added validation and error handling for invalid input values (e.g. age <= 0, repeat <= 0)
