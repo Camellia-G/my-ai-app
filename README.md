@@ -29,7 +29,7 @@ cd my-ai-app
 ## Usage
 Run the application from the project root：
 ```bash
-python src/main.py
+python src/main.py --name Camellia --age 22
 ```
 
 Learning Progress:
@@ -38,3 +38,5 @@ Day 1:
     (1) set up a Python project and commit the project files using git  
     (2) learn how to use argparse, including ArgumentParser()、add_argument()、parse_args()  
     (3) Added validation and error handling for invalid input values (e.g. age <= 0, repeat <= 0)
+Day 2:  
+    (1) clarify env and request logic  
