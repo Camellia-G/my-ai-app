@@ -2,7 +2,7 @@
 
 A Python project。
 
-## project struction
+## project structure
 
 ```
 my-ai-app/
@@ -11,6 +11,7 @@ my-ai-app/
 │   └── main.py
 ├── .env
 ├── .gitignore
+├── requirements.txt
 └── README.md
 ```
 
