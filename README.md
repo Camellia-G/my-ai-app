@@ -30,8 +30,11 @@ cd my-ai-app
 ## Usage
 Run the application from the project root：
 ```bash
-python src/main.py --name Camellia --age 22
+python src/main.py --name Camellia --age 22 --task ai-sug 
 ```
+## Args 
+--name、--age、--model、--action(quote)、--task(ai-sug or random)   
+
 
 Learning Progress:
 
@@ -41,3 +44,4 @@ Day 1:
     (3) Added validation and error handling for invalid input values (e.g. age <= 0, repeat <= 0)
 Day 2:  
     (1) clarify env and request logic  
+    (2) integrate DeepSeek API  
