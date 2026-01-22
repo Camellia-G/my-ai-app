@@ -7,7 +7,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--name", help="Enter your name", required=True)
     parser.add_argument("--age", type=int, help="Enter your age")
     parser.add_argument("--repeat",type=int)
-    parser.add_argument("--action",default="quote")
+    parser.add_argument("--action")
     parser.add_argument("--task",default="random")
     return parser.parse_args()
 
@@ -17,5 +17,6 @@ def validate_args(args):
             raise ValueError("--age is invalid")
     except ValueError as e:
         print(f"Error: {e}")
-        return 
+        return False
+    return True
 

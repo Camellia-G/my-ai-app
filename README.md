@@ -45,3 +45,6 @@ Day 1:
 Day 2:  
     (1) clarify env and request logic  
     (2) integrate DeepSeek API  
+Day 3:  
+    (1) integrate ai-chat  
+    

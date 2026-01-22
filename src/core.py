@@ -1,6 +1,7 @@
 import os
 import requests
-from urllib3 import response
+
+from ai_engine import ChatSession
 from openai import OpenAI
 from dotenv import load_dotenv
 load_dotenv()
@@ -26,7 +27,7 @@ def get_ai_suggestion(args):
                 {"role": "system", "content": "你是一个幽默的人生导师。"},
                 {"role":"user","content":f"I am a studenet.{args.age} years old.give me some suggestions about studying or working.Do not ask me any questions.answer me in English.use 150 words."}
             ],
-            stream=True
+            stream=False
         )
         
         content=response.choices[0].message.content
@@ -39,10 +40,25 @@ def get_info(args):
         random_sentence()
     if(args.task=="ai-sug"):
         get_ai_suggestion(args)
-        
+
+def start_chat_mode():
+    session=ChatSession()
+    print("--- 已进入 AI 聊天模式 (输入 'quit' 退出) ---")
+    while True:
+        user_input = input("👤 You:")
+        if user_input.lower() in ['quit','exit','quit()']:
+            print("Bye!")
+            break
+        if not user_input.strip():
+            continue
+        session.chat(user_input)
+
+
 def OutPut(args):
     print(f"Hello, {args.name}!")
     print(f"Next year you will be {args.age + 1}")
         
     if(args.action=="quote"):
         get_info(args)
+    elif(args.action=="ai-chat"):
+        start_chat_mode()

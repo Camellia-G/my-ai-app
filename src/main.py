@@ -7,7 +7,8 @@ def main() :
     print("------Project:")
     print(f"Current Directory:{os.getcwd()}")
     args = parse_args()
-    validate_args(args)
+    if not validate_args(args):
+        exit()
     OutPut(args)
 
 
