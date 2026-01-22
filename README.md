@@ -8,8 +8,13 @@ A Python project。
 my-ai-app/
 ├── src/
 │   ├── __init__.py
-│   └── main.py
-├── .env
+│   ├── main.py          # Main entry point
+│   ├── cli.py           # Command-line argument parsing
+│   ├── core.py          # Core functionality (random sentences, AI suggestions, chat mode)
+│   └── ai_engine.py     # AI chat engine
+├── tests/
+│   └── test_cli.py      # Test files
+├── .env                 # Environment variables configuration
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -32,9 +37,6 @@ Run the application from the project root：
 ```bash
 python src/main.py --name Camellia --age 22 --task ai-sug 
 ```
-## Args 
---name、--age、--model、--action(quote)、--task(ai-sug or random)   
-
 
 Learning Progress:
 
@@ -47,4 +49,38 @@ Day 2:
     (2) integrate DeepSeek API  
 Day 3:  
     (1) integrate ai-chat  
+    (2) test cli.py  
+
+## Args
+
+Command-line arguments:
+
+```
+Argument Structure:
+├── --name (required)
+│   └── Type: string
+│   └── Description: User's name
+│
+├── --age (optional)
+│   └── Type: int
+│   └── Description: User's age, must be > 0
+│
+├── --model (optional)
+│   └── Default: "deepseek-chat"
+│   └── Description: Specify the AI model to use
+│
+├── --action (optional)
+│   ├── "quote"
+│   │   └── Function: Display quote information (random sentence or AI suggestion based on --task)
+│   └── "ai-chat"
+│       └── Function: Start AI chat mode (interactive conversation)
+│
+└── --task (optional)
+    ├── Default: "random"
+    ├── "random"
+    │   └── Function: Get random sentence from Hitokoto API
+    └── "ai-sug"
+        └── Function: Get AI study/work suggestions (requires --age parameter)
+```   
+
     
