@@ -12,6 +12,7 @@ my-ai-app/
 │   ├── cli.py           # Command-line argument parsing
 │   ├── core.py          # Core functionality (random sentences, AI suggestions, chat mode)
 │   └── ai_engine.py     # AI chat engine
+├── config.yaml  
 ├── tests/
 │   └── test_cli.py      # Test files
 ├── .env                 # Environment variables configuration
@@ -38,6 +39,24 @@ Run the application from the project root：
 python src/main.py --name Camellia --age 22 --task ai-sug 
 ```
 
+### YAML config file (optional)
+You can provide a YAML config file instead of passing everything on the command line.
+Command-line arguments will override config values when both are provided.
+
+Example `config.yaml`:
+```yaml
+name: Camellia
+age: 22
+action: quote
+task: ai-sug
+model: deepseek-chat
+```
+
+Run with:
+```bash
+python src/main.py --config config.yaml
+```
+
 Learning Progress:
 
 Day 1:   
@@ -50,6 +69,9 @@ Day 2:
 Day 3:  
     (1) integrate ai-chat  
     (2) test cli.py  
+Day 4:
+    (1) modify ai-chat
+    (2) added config file
 
 ## Args
 

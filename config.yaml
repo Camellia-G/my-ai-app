@@ -1,0 +1,5 @@
+
+model: deepseek-chat
+name: Camellia
+age: 22
+action: ai-chat

@@ -41,9 +41,24 @@ def get_info(args):
     if(args.task=="ai-sug"):
         get_ai_suggestion(args)
 
-def start_chat_mode():
+def start_chat_mode(args):
     session=ChatSession()
     print("--- 已进入 AI 聊天模式 (输入 'quit' 退出) ---")
+    key=os.getenv("DEEPSEEK_API_KEY")
+    client=OpenAI(
+        api_key=key,
+        base_url="https://api.deepseek.com"
+    )
+    response = client.chat.completions.create(
+            model=args.model,
+            messages=[
+                {"role": "system", "content": "你是一个幽默的人生导师。"},
+                {"role":"user","content":f"I am a studenet.{args.age} years old.Please greet me"}
+            ],
+            stream=False
+        )
+    content=response.choices[0].message.content
+    print(f"🤖 AI: : {content}")
     while True:
         user_input = input("👤 You:")
         if user_input.lower() in ['quit','exit','quit()']:
@@ -61,4 +76,4 @@ def OutPut(args):
     if(args.action=="quote"):
         get_info(args)
     elif(args.action=="ai-chat"):
-        start_chat_mode()
+        start_chat_mode(args)
