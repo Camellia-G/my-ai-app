@@ -14,6 +14,7 @@ my-ai-app/
 │   └── ai_engine.py     # AI chat engine
 ├── config.yaml  
 ├── tests/
+│   ├── __init__.py
 │   └── test_cli.py      # Test files
 ├── .env                 # Environment variables configuration
 ├── .gitignore
@@ -71,7 +72,8 @@ Day 3:
     (2) test cli.py  
 Day 4:
     (1) modify ai-chat
-    (2) added config file
+    (2) added config file  
+
 
 ## Args
 
